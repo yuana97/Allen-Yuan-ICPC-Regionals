@@ -21,7 +21,7 @@
  *    f[i+1][j] += f[i][j]. Prepending a 1 adds 2^i to the number so let offset = j - 2^i mod k
  *    be the inverse of j under this operation and let c[i+1][j] += c[i][offset] and
  *    f[i+1][j] += c[i][offset]. Finally consider that after prepending a 1, each
- *    number of c[i][offset] contributes a 1 to f[i+1][j] so let f[i+1][j] += c[i][offset].
+ *    number of c[i][offset] contributes a new 1 to f[i+1][j] so let f[i+1][j] += c[i][offset].
  *
  *    The below code contains this logic.
 **/
