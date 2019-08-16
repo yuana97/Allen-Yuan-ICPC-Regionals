@@ -47,18 +47,23 @@ int main() {
   int k;
   int b;
   cin >> k >> b;
+  
   // init bit count and num count per residue class
   vector<int> bit_count(k);
   vector<int> num_count(k);
+  
   // base case: our convention is that 0 is the only 0 bitlength number.
   // certainly 0 is congruent to 0 mod k.
   num_count[0] = 1;
+  
   // the additive inverse of 2^i mod k where i is the bitlength (0 indexed)
   int inverse = k - 1;
+  
   for (int i = 0; i < b; i++) {
     // initialize new bit count and num count
     vector<int> new_bit_count(k);
     vector<int> new_num_count(k);
+    
     // for each remainder j mod k, consider appending bits from left.
     for (int j = 0; j < k; j++) {
       // prej = the preimage of j under prepending a 1
@@ -68,12 +73,15 @@ int main() {
       new_num_count[j] = (num_count[j] + num_count[prej]) % MOD;
       new_bit_count[j] = (bit_count[j] + bit_count[prej] + num_count[prej]) % MOD;
     }
+    
     // update bitcount and numcount
     bit_count = new_bit_count;
     num_count = new_num_count;
+    
     // update the inverse
     inverse = 2*inverse % k;
   }
+  
   cout << bit_count[0] << endl;
   return 0;
 }
