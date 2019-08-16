@@ -39,7 +39,7 @@ Click the folder with the contest you are interested in and see my solution w/ p
 #include <bits/stdc++.h>
 
 using namespace std;
-const int MOD = 1'000'000'009;
+const int MOD = 1000000009;
 
 int main() {
   // stream in k and b
