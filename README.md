@@ -7,7 +7,7 @@ Work in progress to clean up, comment, upload solutions.
 Click the folder with the contest you are interested in and see my solution w/ problem statement and comments all in the corresponding cpp file.
 
 # Sample: Count the Bits
-
+```
 /**
  *    author:  Allen Yuan
  *    created: 8/15/2019
@@ -77,4 +77,4 @@ int main() {
   cout << bit_count[0] << endl;
   return 0;
 }
-
+```
