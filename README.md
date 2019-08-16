@@ -6,6 +6,8 @@ Work in progress to clean up, write editorials, and write inline comments.
 # How to use
 Click the folder with the contest you are interested in and see my solution w/ problem statement and comments all in the corresponding cpp file.
 
+To test a file, compile it and run it against the canonical test cases for example here http://acmicpc-pacnw.org/ProblemSet/2018/div1.pdf
+
 # Sample: Count the Bits
 ```
 /**
